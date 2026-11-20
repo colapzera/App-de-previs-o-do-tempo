@@ -1,3 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
 body {
-    background-image: url("https://source.unsplash.com/1600x900/?landscape");
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat:  no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+.tempo {
+    color: #fff;
+    font-size: 45px;
+    text-align: center;
+    padding: 20px;
+}
+.description {
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+}
+.humidity {
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
 }

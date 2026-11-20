@@ -9,19 +9,29 @@
 </head>
 
 <body>
-    <input>
-    <button>Buscar</button>
-    <h2>
-        Tempos em Rio de Janeiro
-    </h2>
+    <div class="container">
+        <input>
+        <button>Buscar</button>
+<div>
+    
+        <h2>
+            Tempos em Rio de Janeiro
+        </h2>
 
-    <p>28°C</p>
+        <p class="tempo">28°C</p>
 
-    <p>Nuvens Dispersas</p>
+        <p class="description">Nuvens Dispersas</p>
 
-    <p>Humidade: 70%</p>
+        <p class="humidity">Humidade: 70%</p>
 
 
+</div>
+
+    </div>
+    <script>
+        document.body.style.backgroundImage =
+            `url("https://picsum.photos/1600/900?random=${Date.now()}")`;
+    </script>
 </body>
 
 </html>
