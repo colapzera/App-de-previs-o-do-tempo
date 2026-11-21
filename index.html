@@ -4,28 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <title>Previsão do Tempo</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
     <div class="container">
-        <input>
-        <button>Buscar</button>
-<div>
-    
-        <h2>
-            Tempos em Rio de Janeiro
-        </h2>
+        <input placeholder="Digite o nome da cidade" type="text" class="input-city">
+        <button>
+            <img class="lupa" src="https://www.svgrepo.com/show/488200/find.svg" alt="">
+        </button>
+        <div class="caixa-media">
 
-        <p class="tempo">28°C</p>
+            <h2 class="city">
+                Tempos em Rio de Janeiro
+            </h2>
 
-        <p class="description">Nuvens Dispersas</p>
+            <p class="tempo">28°C</p>
 
-        <p class="humidity">Humidade: 70%</p>
+            <p class="description">Nuvens Dispersas</p>
+
+            <p class="humidity">Humidade: 70%</p>
 
 
-</div>
+        </div>
 
     </div>
     <script>
