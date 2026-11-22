@@ -14,27 +14,19 @@
 
 <body>
     <div class="container">
-        <input placeholder="Cidade" type="text" class="input-city">
-        <button type="button" id="search-button">
-            <img class="lupa" src="https://www.svgrepo.com/show/488200/find.svg" alt="">
-        </button>
+        <form class="search-box">
+            <input placeholder="Buscar cidade" type="text" class="input-city" aria-label="Cidade">
+            <button type="submit" id="search-button" aria-label="Buscar">
+                <img class="lupa" src="https://www.svgrepo.com/show/488200/find.svg" alt="">
+            </button>
+        </form>
         <div class="caixa-media">
-
-            <h2 class="city">
-                Tempos em Rio de Janeiro
-            </h2>
-
+            <h2 class="city">Rio de Janeiro</h2>
+            <span class="weather-icon" aria-hidden="true">☁️</span>
             <p class="tempo">28°C</p>
-
-            <p class="description"> <img class="nuvem"
-                    src="https://static.vecteezy.com/system/resources/previews/012/595/169/non_2x/realistic-white-cloud-free-png.png"
-                    alt="Nuvens Dispersas"> Nuvens Dispersas</p>
-
+            <p class="description">Nublado</p>
             <p class="humidity">Umidade: 70%</p>
-
-
         </div>
-
     </div>
     <script src="./script.js"></script>
 </body>

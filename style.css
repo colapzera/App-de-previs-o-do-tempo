@@ -7,94 +7,164 @@
 
 body {
     min-height: 100vh;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-
+    padding: 24px;
+    background-color: #2e5b88;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background 600ms ease;
 }
-
 
 .container {
-    background-color: #000000;
-    max-width: 420px;
+    background: rgba(20, 30, 48, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 24px 60px rgba(10, 25, 45, 0.32);
+    backdrop-filter: blur(18px);
+    max-width: 440px;
     width: 95%;
-    padding: 20px;
-    border-radius: 25px;
+    padding: 24px;
+    border-radius: 28px;
     text-align: center;
-    opacity: 0.8;
+    animation: aparecer 500ms ease-out;
 }
 
-input {
+.search-box {
+    display: flex;
+    gap: 10px;
+}
+
+.input-city {
     border: none;
     outline: none;
-    padding: 10px;
-    border-radius: 18px;
+    padding: 13px 16px;
+    border-radius: 16px;
     font-size: 16px;
-    background-color: #7c7c7c2b;
-    color: #7c7c7c;
-    width: calc(100% - 100px);
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+    flex: 1;
+    min-width: 0;
 }
 
-input:hover {
-    background-color: #7c7c7c2b;
-    cursor: pointer;
+.input-city::placeholder {
+    color: rgba(255, 255, 255, 0.72);
 }
 
-button {
+#search-button {
     border: none;
-    outline: none;
-    padding: 10px;
-    border-radius: 50px;
-    font-size: 16px;
-    background-color: #7c7c7c2b;
-    float: right;
-
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+    background: #fff;
+    display: grid;
+    place-items: center;
+    transition: 180ms ease;
 }
 
-button:hover {
-    background-color: #7c7c7c;
+#search-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.22);
     cursor: pointer;
 }
 
 .lupa {
-    height: 20px;
+    height: 22px;
+}
+
+.caixa-media {
+    margin-top: 26px;
+    min-height: 280px;
 }
 
 .city {
-    color: #fff;
-    font-size: 30px;
-    text-align: center;
-    padding: 10px;
+    font-size: clamp(24px, 7vw, 32px);
+    font-weight: 600;
+    letter-spacing: -0.5px;
+}
+
+.weather-icon {
+    display: block;
+    height: 82px;
+    margin: 12px 0 2px;
+    font-size: 68px;
+    filter: drop-shadow(0 10px 16px rgba(0, 0, 0, 0.18));
+    animation: flutuar 3s ease-in-out infinite;
 }
 
 .tempo {
-    color: #fff;
-    font-size: 45px;
-    text-align: center;
-    padding: 20px;
+    font-size: clamp(52px, 16vw, 76px);
+    font-weight: 700;
+    line-height: 1;
+    margin: 4px 0 14px;
+    letter-spacing: -3px;
 }
 
 .description {
-    color: #fff;
-    font-size: 20px;
-    text-align: center;
-    padding: 10px;
-
+    font-size: 18px;
+    font-weight: 500;
 }
-
-.nuvem {
-    width: 40px;
-    height: 30px;
-}
-
-
 
 .humidity {
-    color: #fff;
-    font-size: 20px;
-    text-align: center;
-    padding: 10px;
+    display: inline-block;
+    margin-top: 18px;
+    padding: 9px 14px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.11);
+    font-size: 14px;
+}
+
+.container.loading .weather-icon {
+    animation: girar 1s linear infinite;
+}
+
+.container.erro .tempo {
+    font-size: 28px;
+    letter-spacing: 0;
+}
+
+body.ceu-limpo {
+    background: linear-gradient(135deg, #36a9e1, #68c5d8);
+}
+
+body.nublado {
+    background: linear-gradient(135deg, #536976, #9aa9b4);
+}
+
+body.chuvoso {
+    background: linear-gradient(135deg, #314b67, #6683a1);
+}
+
+body.neve {
+    background: linear-gradient(135deg, #829bb5, #c7d7e7);
+}
+
+body.trovoada {
+    background: linear-gradient(135deg, #25273a, #5d5e78);
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes flutuar {
+    50% { transform: translateY(-6px); }
+}
+
+@keyframes girar {
+    to { transform: rotate(360deg); }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 14px;
+    }
+
+    .container {
+        padding: 20px;
+        border-radius: 22px;
+    }
 }
