@@ -15,7 +15,7 @@
 <body>
     <div class="container">
         <input placeholder="Cidade" type="text" class="input-city">
-        <button>
+        <button type="button" id="search-button">
             <img class="lupa" src="https://www.svgrepo.com/show/488200/find.svg" alt="">
         </button>
         <div class="caixa-media">
@@ -26,18 +26,17 @@
 
             <p class="tempo">28°C</p>
 
-            <p class="description"> <img class="nuvem" src="https://static.vecteezy.com/system/resources/previews/012/595/169/non_2x/realistic-white-cloud-free-png.png" alt="Nuvens Dispersas"> Nuvens Dispersas</p>
+            <p class="description"> <img class="nuvem"
+                    src="https://static.vecteezy.com/system/resources/previews/012/595/169/non_2x/realistic-white-cloud-free-png.png"
+                    alt="Nuvens Dispersas"> Nuvens Dispersas</p>
 
-            <p class="humidity">Humidade: 70%</p>
+            <p class="humidity">Umidade: 70%</p>
 
 
         </div>
 
     </div>
-    <script>
-        document.body.style.backgroundImage =
-            `url("https://picsum.photos/1600/900?random=${Date.now()}")`;
-    </script>
+    <script src="./script.js"></script>
 </body>
 
 </html>
